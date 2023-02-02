@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS</title>
+    </head>
+    <body>
+        <script>
+            function getDays(height) {
+                let days = Math.ceil(Math.max(1, height - 30)/20);
+                return days;
+            };
+            console.log(getDays(100));
+
+            function getCount(personsCount) {
+                return personsCount < 2 ? 0 : personsCount-1 + getCount(personsCount-1);
+            }
+            console.log(getCount(10));
+
+            function getUniq(string) {
+                let arrayFromString = string.split(',');
+                let uniqArray = [...new Set(arrayFromString)];
+                return uniqArray.join(',');
+            }
+            console.log(getUniq("cat, dog, mouse, cat, fox, fish, fox, dog, dog"));
+        </script>
+    </body>
+</html>
